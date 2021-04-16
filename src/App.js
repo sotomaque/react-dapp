@@ -3,6 +3,8 @@ import { ethers } from 'ethers';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
 
 const greeterAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+console.log(``);
+console.log('process.env', process.env);
 
 function App() {
   const [greetingValue, setGreetingValue] = useState('');
@@ -61,7 +63,7 @@ function App() {
         <button type="submit">Update Greeting</button>
       </form>
       <div style={{ marginTop: 25 }}>
-        <button onSubmit={fetchGreeting}>Check Greeting</button>
+        <button onClick={fetchGreeting}>Check Greeting</button>
       </div>
     </>
   );
