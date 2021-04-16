@@ -1,8 +1,6 @@
 //SPDX-License-Identifier: Unlicense
-pragma solidity ^0.7.0;
-
+pragma solidity ^0.8.3;
 import "hardhat/console.sol";
-
 
 contract Greeter {
   string greeting;
@@ -11,7 +9,9 @@ contract Greeter {
     console.log("Deploying a Greeter with greeting:", _greeting);
     greeting = _greeting;
   }
-
+  // public -> can be accessed by anyone
+  // view -> reads from blockchain
+  // pure functions neither read nor write to blockchain -> only return const
   function greet() public view returns (string memory) {
     return greeting;
   }
